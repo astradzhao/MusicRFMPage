@@ -1,4 +1,19 @@
-This website is here to provide listening samples for our ICLR 2026 reviewers.
+This website is here to provide listening samples for our paper, Steering Autoregressive Music Generation with Recursive Feature Machines.
+
+You can find our open source MusicRFM repo here: https://github.com/astradzhao/music-rfm.
+
+## Citation
+
+If you use MusicRFM in your research, please cite:
+
+```bibtex
+@article{zhaosteering2025,
+  title={Steering Autoregressive Music Generation with Recursive Feature Machines},
+  author={Daniel Zhao, Daniel Beaglehole, Taylor Berg-Kirkpatrick, Julian McAuley, Zachary Novack},
+  journal={arXiv preprint},
+  year={2025}
+}
+```
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
