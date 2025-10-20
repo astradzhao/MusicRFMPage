@@ -24,14 +24,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>MusicRFM</title>
+  <title>Steering Autoregressive Music Generation with Recursive Feature Machines</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -40,8 +37,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
 <body>
@@ -52,13 +47,13 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">MusicRFM</h1>
+            <h1 class="title is-1 publication-title" style="font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.3;">Steering Autoregressive Music Generation with Recursive Feature Machines</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Daniel Zhao, Daniel Beaglehole, Taylor Berg-Kirkpatrick, Julian McAuley, Zachary Novack<br>ICLR 2026 submission</span>
+                    <span class="author-block">Daniel Zhao, Daniel Beaglehole, Taylor Berg-Kirkpatrick, Julian McAuley, Zachary Novack<br><span style="font-weight: 600;">ICLR 2026 submission</span></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -74,7 +69,7 @@
                     </span> -->
 
                     <span class="link-block">
-                      <a href="static/pdfs/sample.pdf" target="_blank"
+                      <a href="static/pdfs/MusicRFM.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -114,17 +109,17 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3 has-text-centered">Audio Samples</h2>
-      <p class="subtitle is-6 has-text-centered" style="margin-bottom: 3rem;">Organized by control class</p>
+      <h2 class="title is-3 has-text-centered" style="margin-bottom: 1rem;">Audio Samples</h2>
+      <p class="subtitle is-6 has-text-centered" style="margin-bottom: 3rem; margin-top: 0; font-style: italic;">Organized by control class</p>
       
       <!-- Note Controls -->
-      <div style="margin-bottom: 3rem;">
+      <div style="margin-bottom: 1.5rem;">
         <h3 class="title is-4 has-text-centered" style="margin-bottom: 1.5rem;">Note Controls</h3>
         <div id="audio-carousel-notes" class="audio-carousel">
           <div class="audio-carousel-container">
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/defaultprompt0/note_C_defaultprompt0_control0.6_inject0.3.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -136,7 +131,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/listening_test/prompt_5/optimal_noteG_prompt5_control0.5.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -148,7 +143,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/listening_test/prompt_13/optimal_noteD_prompt13_control0.5.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -163,13 +158,13 @@
       </div>
 
       <!-- Chord Controls -->
-      <div style="margin-bottom: 3rem;">
+      <div style="margin-bottom: 1.5rem;">
         <h3 class="title is-4 has-text-centered" style="margin-bottom: 1.5rem;">Chord Controls</h3>
         <div id="audio-carousel-chords" class="audio-carousel">
           <div class="audio-carousel-container">
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/defaultprompt0/augmented_chord_defaultprompt0_control0.6_inject0.3.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -181,7 +176,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/defaultprompt0/minor_chord_defaultprompt0_control0.4.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -193,7 +188,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/listening_test/prompt_5/optimal_chordaug_prompt5_control0.5.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -205,7 +200,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/listening_test/prompt_13/optimal_chordmajor_prompt13_control0.5.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -220,13 +215,13 @@
       </div>
 
       <!-- Interval Controls -->
-      <div style="margin-bottom: 3rem;">
+      <div style="margin-bottom: 1.5rem;">
         <h3 class="title is-4 has-text-centered" style="margin-bottom: 1.5rem;">Interval Controls</h3>
         <div id="audio-carousel-intervals" class="audio-carousel">
           <div class="audio-carousel-container">
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/listening_test/prompt_5/optimal_interval2_prompt5_control0.7.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -238,7 +233,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/listening_test/prompt_10/naive_interval6_prompt10_control0.7.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -250,7 +245,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/listening_test/prompt_13/optimal_interval1_prompt13_control0.7.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -265,13 +260,13 @@
       </div>
 
       <!-- Tempo Controls -->
-      <div style="margin-bottom: 3rem;">
+      <div style="margin-bottom: 1.5rem;">
         <h3 class="title is-4 has-text-centered" style="margin-bottom: 1.5rem;">Tempo Controls</h3>
         <div id="audio-carousel-tempo" class="audio-carousel">
           <div class="audio-carousel-container">
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/listening_test/prompt_10/optimal_exptime_tempos_prompt10_control-0.2.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -283,7 +278,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/listening_test/prompt_10/optimal_exptime_tempos_prompt10_control0.2.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -298,13 +293,13 @@
       </div>
 
       <!-- Multi-Direction Controls -->
-      <div style="margin-bottom: 3rem;">
+      <div style="margin-bottom: 1.5rem;">
         <h3 class="title is-4 has-text-centered" style="margin-bottom: 1.5rem;">Multi-Direction Controls</h3>
         <div id="audio-carousel-multi" class="audio-carousel">
           <div class="audio-carousel-container">
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/other_stuff/noteFsharp_tempo_prompt10_control_0.5_0.3.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -316,7 +311,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/other_stuff/noteFsharp_tempo_prompt10_control_0.5_-0.3.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -328,7 +323,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/other_stuff/chordminor_tempo_prompt7_control_0.5_0.3.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -340,7 +335,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/other_stuff/chordminor_tempo_prompt7_control_0.5_-0.3.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -352,7 +347,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/other_stuff/noteD_chordminor_prompt2_control_0.5_0.5.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -367,13 +362,13 @@
       </div>
 
       <!-- Temporal Controls -->
-      <div style="margin-bottom: 3rem;">
+      <div style="margin-bottom: 1.5rem;">
         <h3 class="title is-4 has-text-centered" style="margin-bottom: 1.5rem;">Temporal Controls</h3>
         <div id="audio-carousel-temporal" class="audio-carousel">
           <div class="audio-carousel-container">
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/other_stuff/interval2to7_prompt16_control_0.5_0.5.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -385,7 +380,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/other_stuff/noteAtoE_prompt6_control_0.5_0.5.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -400,13 +395,13 @@
       </div>
 
       <!-- Baseline / No Control Section -->
-      <div style="margin-bottom: 3rem;">
+      <div style="margin-bottom: 1.5rem;">
         <h3 class="title is-4 has-text-centered" style="margin-bottom: 1.5rem;">Baseline (No Control)</h3>
         <div id="audio-carousel-baseline" class="audio-carousel">
           <div class="audio-carousel-container">
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/basegens/base_0.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -417,7 +412,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/basegens/base_2.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -428,7 +423,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/basegens/base_5.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -439,7 +434,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/basegens/base_6.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -450,7 +445,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/basegens/base_7.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -461,7 +456,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/basegens/base_10.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -472,7 +467,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/basegens/base_13.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -483,7 +478,7 @@
             </div>
             <div class="audio-carousel-item">
               <div style="display: flex; justify-content: center;">
-                <audio controls style="width: 80%; margin-bottom: 1rem;">
+                <audio controls preload="metadata" style="width: 80%; margin-bottom: 1rem;">
                   <source src="static/audio/basegens/base_16.flac" type="audio/flac">
                   Your browser does not support the audio element.
                 </audio>
@@ -509,7 +504,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          Controllable music generation remains a significant challenge, with existing methods often requiring model retraining or introducing audible artifacts. We introduce MusicRFM, a framework that adapts Recursive Feature Machines (RFMs) to enable fine-grained, interpretable control over frozen, pre-trained music models by directly steering their internal activations. RFMs analyze a model's internal gradients to produce interpretable "concept directions", or specific axes in the activation space that correspond to musical attributes like notes or chords. We first train lightweight RFM probes to discover these directions within MusicGen's hidden states; then, during inference, we inject them back into the model to guide the generation process in real-time without per-step optimization. We present advanced mechanisms for this control, including dynamic, time-varying schedules and methods for the simultaneous enforcement of multiple musical properties. Our method successfully navigates the trade-off between control and generation quality: we can increase the accuracy of generating a target musical note from 0.23 to 0.82, while text prompt adherence remains within approximately 0.02 of the unsteered baseline, demonstrating effective control with minimal impact on prompt fidelity.
+          Controllable music generation remains a significant challenge, with existing methods often requiring model retraining or introducing audible artifacts. We introduce <strong>MusicRFM</strong>, a framework that adapts Recursive Feature Machines (RFMs) to enable fine-grained, interpretable control over frozen, pre-trained music models by directly steering their internal activations. 
+          </p>
+          <p>
+          RFMs analyze a model's internal gradients to produce interpretable "concept directions", or specific axes in the activation space that correspond to musical attributes like notes or chords. We first train lightweight RFM probes to discover these directions within MusicGen's hidden states; then, during inference, we inject them back into the model to guide the generation process in real-time without per-step optimization. 
+          </p>
+          <p>
+          We present advanced mechanisms for this control, including dynamic, time-varying schedules and methods for the simultaneous enforcement of multiple musical properties. Our method successfully navigates the trade-off between control and generation quality: we can <strong>increase the accuracy of generating a target musical note from 0.23 to 0.82</strong>, while text prompt adherence remains within approximately 0.02 of the unsteered baseline, demonstrating effective control with minimal impact on prompt fidelity.
           </p>
         </div>
       </div>
